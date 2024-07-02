@@ -92,60 +92,13 @@ function Calendar({ date }) {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td className={TableMatrix[0][0].class}>{TableMatrix[0][0].date}</td>
-                            <td className={TableMatrix[0][1].class}>{TableMatrix[0][1].date}</td>
-                            <td className={TableMatrix[0][2].class}>{TableMatrix[0][2].date}</td>
-                            <td className={TableMatrix[0][3].class}>{TableMatrix[0][3].date}</td>
-                            <td className={TableMatrix[0][4].class}>{TableMatrix[0][4].date}</td>
-                            <td className={TableMatrix[0][5].class}>{TableMatrix[0][5].date}</td>
-                            <td className={TableMatrix[0][6].class}>{TableMatrix[0][6].date}</td>
-                        </tr>
-                        <tr>
-                            <td className={TableMatrix[1][0].class}>{TableMatrix[1][0].date}</td>
-                            <td className={TableMatrix[1][1].class}>{TableMatrix[1][1].date}</td>
-                            <td className={TableMatrix[1][2].class}>{TableMatrix[1][2].date}</td>
-                            <td className={TableMatrix[1][3].class}>{TableMatrix[1][3].date}</td>
-                            <td className={TableMatrix[1][4].class}>{TableMatrix[1][4].date}</td>
-                            <td className={TableMatrix[1][5].class}>{TableMatrix[1][5].date}</td>
-                            <td className={TableMatrix[1][6].class}>{TableMatrix[1][6].date}</td>
-                        </tr>
-                        <tr>
-                            <td className={TableMatrix[2][0].class}>{TableMatrix[2][0].date}</td>
-                            <td className={TableMatrix[2][1].class}>{TableMatrix[2][1].date}</td>
-                            <td className={TableMatrix[2][2].class}>{TableMatrix[2][2].date}</td>
-                            <td className={TableMatrix[2][3].class}>{TableMatrix[2][3].date}</td>
-                            <td className={TableMatrix[2][4].class}>{TableMatrix[2][4].date}</td>
-                            <td className={TableMatrix[2][5].class}>{TableMatrix[2][5].date}</td>
-                            <td className={TableMatrix[2][6].class}>{TableMatrix[2][6].date}</td>
-                        </tr>
-                        <tr>
-                            <td className={TableMatrix[3][0].class}>{TableMatrix[3][0].date}</td>
-                            <td className={TableMatrix[3][1].class}>{TableMatrix[3][1].date}</td>
-                            <td className={TableMatrix[3][2].class}>{TableMatrix[3][2].date}</td>
-                            <td className={TableMatrix[3][3].class}>{TableMatrix[3][3].date}</td>
-                            <td className={TableMatrix[3][4].class}>{TableMatrix[3][4].date}</td>
-                            <td className={TableMatrix[3][5].class}>{TableMatrix[3][5].date}</td>
-                            <td className={TableMatrix[3][6].class}>{TableMatrix[3][6].date}</td>
-                        </tr>
-                        <tr>
-                            <td className={TableMatrix[4][0].class}>{TableMatrix[4][0].date}</td>
-                            <td className={TableMatrix[4][1].class}>{TableMatrix[4][1].date}</td>
-                            <td className={TableMatrix[4][2].class}>{TableMatrix[4][2].date}</td>
-                            <td className={TableMatrix[4][3].class}>{TableMatrix[4][3].date}</td>
-                            <td className={TableMatrix[4][4].class}>{TableMatrix[4][4].date}</td>
-                            <td className={TableMatrix[4][5].class}>{TableMatrix[4][5].date}</td>
-                            <td className={TableMatrix[4][6].class}>{TableMatrix[4][6].date}</td>
-                        </tr>
-                        <tr>
-                            <td className={TableMatrix[5][0].class}>{TableMatrix[5][0].date}</td>
-                            <td className={TableMatrix[5][1].class}>{TableMatrix[5][1].date}</td>
-                            <td className={TableMatrix[5][2].class}>{TableMatrix[5][2].date}</td>
-                            <td className={TableMatrix[5][3].class}>{TableMatrix[5][3].date}</td>
-                            <td className={TableMatrix[5][4].class}>{TableMatrix[5][4].date}</td>
-                            <td className={TableMatrix[5][5].class}>{TableMatrix[5][5].date}</td>
-                            <td className={TableMatrix[5][6].class}>{TableMatrix[5][6].date}</td>
-                        </tr>
+                        {TableMatrix.map((i) => (
+                            <tr>
+                                {i.map((j) => (
+                                    <td className={j.class}>{j.date}</td>
+                                ))}
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>
